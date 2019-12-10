@@ -1,0 +1,17 @@
+.alert {
+  width: 90%;
+  text-align: center;
+  color: white;
+  padding: 5px;
+  margin: 5px;
+}
+
+.alert--danger {
+  background: rgba(248, 2, 2, 0.603);
+  border: 1px solid red;
+}
+
+.alert--positive {
+  background: rgba(0, 218, 18, 0.603);
+  border: 1px solid green;
+}

@@ -1,0 +1,35 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  @media (min-width: 500px) {
+    margin-right: 80px;
+  }
+}
+
+.stats {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.items {
+  display: flex;
+}
+.stats__panel {
+  display: block;
+  padding: 4px 2px;
+  border: 1px solid black;
+  margin: 5px 2px;
+  @media (min-width: 500px) {
+    padding: 15px 22px;
+  }
+}
+.timer {
+}
