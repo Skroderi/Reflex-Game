@@ -75,11 +75,6 @@ class Game {
     this.boardSquares.removeEventListener("click", this.clickSquare);
   }
 
-  continueGame() {
-    this.timer.startTimer();
-    setInterval(this.startDrawSquare, 1200);
-    this.boardSquares.addEventListener("click", this.clickSquare);
-  }
   endGame() {
     this.stopGame();
     this.ui.removeSquaresColor();
@@ -88,6 +83,7 @@ class Game {
       "alert alert--positive"
     );
   }
+
   isMissedSquare(drawnSquare) {
     const isActive = drawnSquare.classList.contains("active");
     if (isActive) {
@@ -97,7 +93,7 @@ class Game {
       setTimeout(() => {
         alert("You missed square.");
         this.startGame();
-      }, 50);
+      }, 0);
     }
     this.render(this.timer.time, this.statistics.lifes, this.statistics.score);
   }
@@ -141,7 +137,7 @@ class Game {
           }
 
           this.stopGame();
-          alert("You clicked wrong square and lost life!");
+          alert("You clicked wrong square.");
           this.startGame();
         }
       } else {
